@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/root/my_blur_pkg/devel -DCMAKE_INSTALL_PREFIX=/root/my_blur_pkg/install -G Unix Makefiles
