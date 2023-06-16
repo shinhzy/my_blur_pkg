@@ -26,9 +26,29 @@ root@bebop:~/my_blur_pkg# rosrun my_blur_pkg blur_people.py
 따라서 후처리된 영상이 따로 출력되어야 하므로 영상창이 2개가 됨. 또한 속도가 조금 느림.
 가우시안 블러는 좀 더 느려서 일단 검정색으로 처리함.
 
+
+
+## 본 기능에 대해
+이미지 인식의 과정을 darknet_ros에 맡겨야 하기에 필요한데,이 기능 자체로 영상이 출력됨.
+따라서 후처리된 영상이 따로 출력되어야 하므로 영상창이 2개가 됨. 또한 속도가 조금 느림.
+가우시안 블러는 좀 더 느려서 그냥 검정색으로 처리함.
+
 이를 완전히 해결하기 위해서는 darknet_ros 내의 YoloObjectDetector.cpp 를 수정해야하나,
 기능 구현은 가능할 지라도 특이한 디렉토리 구조에 의해 catkin_make 와 source 에 약간의 문제가 있어서
 우선 이렇게만 만들어 두었음.
+
+
+## 깃허브에서 바로 다운로드
+git 다운로드 기능 먼저 설치
+```
+sudo apt-get install git
+sudo apt install git
+```
+다운로드 받고자 하는 디렉토리 내에서
+```
+git clone https://github.com/shinhzy/my_blur_pkg.git
+```
+
 
 
 
