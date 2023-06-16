@@ -31,4 +31,13 @@ root@bebop:~/my_blur_pkg# rosrun my_blur_pkg blur_people.py
 우선 이렇게만 만들어 두었음.
 
 
-
+## 깃허브에서 바로 다운로드
+git 다운로드 기능 먼저 설치
+```
+sudo apt-get install git
+sudo apt install git
+```
+다운로드 받고자 하는 디렉토리 내에서
+```
+git clone https://github.com/shinhzy/my_blur_pkg.git
+```
