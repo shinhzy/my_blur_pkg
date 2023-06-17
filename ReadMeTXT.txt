@@ -77,7 +77,6 @@ darknet_ros의 darknet_ros.launch 만 간단하게 수정해서
 ## 깃허브에서 바로 다운로드
 git 다운로드 기능 먼저 설치
 ```
-sudo apt-get install git
 sudo apt install git
 ```
 다운로드 받고자 하는 디렉토리 내에서
