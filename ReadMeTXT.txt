@@ -12,6 +12,7 @@ root@bebop:/# cd ~
 root@bebop:~# roslaunch darknet_ros darknet_ros.launch
 ```
 ### [3] 객체 인식된 부분의 데이터를 darknet_ros 에서 받아서 그 부분을 검정색으로 처리
+별도의 source 과정 필요
 ```
 root@bebop:/# cd ~/my_blur_pkg
 root@bebop:~/my_blur_pkg# rosrun my_blur_pkg blur_people.py
