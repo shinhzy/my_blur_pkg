@@ -35,13 +35,19 @@ rqt_image_view /blurred_image
 따라서 후처리된 영상이 따로 출력되어야 하므로 영상창이 2개가 됨. 또한 속도가 조금 느림.
 가우시안 블러는 좀 더 느려서 그냥 검정색으로 처리함.
 
-이를 완전히 해결하기 위해서는 darknet_ros 내의 YoloObjectDetector.cpp 를 수정해야하나,
-기능 구현은 가능할 지라도 특이한 디렉토리 구조에 의해 catkin_make 와 source 에 약간의 문제가 있어서
-우선 이렇게만 만들어 두었음. 즉, 무언가를 수정해도 적용하지 못하고 있음.
-build devel 파일을 복사해와서 시도해도 제대로 적용이 안됨.
 
+~~이를 완전히 해결하기 위해서는 darknet_ros 내 의 YoloObjectDetector.cpp 를 수정해야하나,~~
+~~기능 구현은 가능할 지라도 특이한 디렉토리 구조에 의해 catkin_make 와 source 에 약간의 문제가 있어서~~
+~~우선 이렇게만 만들어 두었음. 즉, 무언가를 수정해도 적용하지 못하고 있음.~~
+
+.bashrc를 살펴보니 darknet_ws 의 코드가 아닌 , yolo_ws를 source 하고 있기에
+roslaunch darknet_ros darknet_ros.launch 는 yolo_ws 내부의 darknet_ros.launch를 호출함.
+다만, 그래도 적용이 잘 되지 않았음.
+
+build devel 파일을 복사해와서 시도해도 제대로 적용이 안됨.
 darknet_ros의 darknet_ros.launch 만 간단하게 수정해서 
 창이 안뜨도록 output="screen"만 이라도 output="log" 로 바꿔서 적용해보려해도 잘 안됨.
+
 ```
   <!-- Start darknet and ros wrapper -->
   <node ns="front" pkg="darknet_ros" type="darknet_ros" name="darknet_ros" output="screen" launch-prefix="$(arg launch_prefix)">
